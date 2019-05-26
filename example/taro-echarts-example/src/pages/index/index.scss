@@ -1,0 +1,48 @@
+@import '../../app.scss';
+
+.page-container {
+  width: 100vw;
+  overflow-x: hidden;
+
+  .menus-container {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 10px 10px;
+    background: $white;
+
+    &__item {
+      width: calc(calc(100vw - 20px) / 5);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px 0;
+      margin-top: 20px;
+
+      &:active {
+        background: rgba(0, 0, 0, 0.2)
+      }
+
+      &__icon {
+        height: 100px;
+        width: 100px;
+        border-radius: 50px;
+        display: flex;
+        background: rgba(0, 0, 0, 0.1);
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+
+        .iconfont {
+          font-size: 55px;
+          color: #3333;
+        }
+      }
+
+      &__name {
+        font-size: 24px;
+        font-size: #3333;
+      }
+    }
+  }
+}

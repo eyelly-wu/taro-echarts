@@ -1,0 +1,38 @@
+{
+  "name": "taro-echarts",
+  "version": "1.0.0-beta",
+  "description": "Taro上ECharts图表组件",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eyelly-wu/taro-echarts.git"
+  },
+  "keywords": [
+    "taro",
+    "echarts"
+  ],
+  "author": "eyelly",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eyelly-wu/taro-echarts/issues"
+  },
+  "homepage": "https://github.com/eyelly-wu/taro-echarts#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@tarojs/components": "^1.3.0-beta.3",
+    "@tarojs/taro": "^1.3.0-beta.3",
+    "@types/webpack-env": "^1.13.9",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-decorators-legacy": "^1.3.5",
+    "babel-plugin-transform-export-extensions": "^6.22.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015": "^6.24.1",
+    "lodash": "^4.17.11",
+    "nervjs": "^1.3.13",
+    "prop-types": "^15.7.2"
+  }
+}
