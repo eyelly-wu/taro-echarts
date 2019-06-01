@@ -8,6 +8,36 @@ import * as echarts from '../ec-canvas/echarts'
 const IS_H5 = process.env.TARO_ENV === 'h5'
 const IS_WEAPP = process.env.TARO_ENV === 'weapp'
 
+const commonFunc = (_this, chart) => {
+  const { option, loading, loadingConf } = _this.props
+  _this.beforeSetOption()
+  _this.chartInstance = chart
+  if (loading) {
+    _this.chartInstance.showLoading('default', loadingConf)
+  } else {
+    _this.chartInstance.setOption(option)
+  }
+}
+
+const initH5Chart = (_this) => {
+  const { chartId } = _this.props
+  let node = document.getElementById(chartId)
+  let chart = echarts.init(node)
+  commonFunc(_this, chart)
+}
+
+const initWeAppChart = (_this) => {
+  _this.chartRef.init((canvas, width, height) => {
+    const chart = echarts.init(canvas, null, {
+      width: width,
+      height: height
+    })
+    canvas.setChart(chart)
+    commonFunc(_this, chart)
+    return chart
+  })
+}
+
 export default class Chart extends Component {
 
   config = {
@@ -19,9 +49,9 @@ export default class Chart extends Component {
 
   componentDidMount() {
     if (IS_WEAPP) {
-      this.renderWeappChart()
+      initWeAppChart(this)
     } else if (IS_H5) {
-      this.renderH5Chart()
+      initH5Chart(this)
     }
   }
 
@@ -32,38 +62,20 @@ export default class Chart extends Component {
     }
   }
 
-  shouldComponentUpdate(nextProps, nextState) {
+  shouldComponentUpdate(nextProps) {
     return !_isEqual(this.props, nextProps)
   }
 
   refreshChart = (newOption) => {
-    const { option } = this.props
+    const { option, loading, loadingConf } = this.props
     if (this.chartInstance) {
-      this.chartInstance.setOption(newOption || option, true)
+      if (loading) {
+        this.chartInstance.showLoading('default', loadingConf)
+      } else {
+        this.chartInstance.hideLoading()
+        this.chartInstance.setOption(newOption || option, true)
+      }
     }
-  }
-
-  renderH5Chart = () => {
-    const { option, chartId } = this.props
-    let node = document.getElementById(chartId)
-    this.beforeSetOption()
-    this.chartInstance = echarts.init(node)
-    this.chartInstance.setOption(option)
-  }
-
-  renderWeappChart = () => {
-    const { option } = this.props
-    this.chartRef.init((canvas, width, height) => {
-      const chart = echarts.init(canvas, null, {
-        width: width,
-        height: height
-      })
-      canvas.setChart(chart)
-      this.beforeSetOption()
-      this.chartInstance = chart
-      chart.setOption(option)
-      return chart
-    })
   }
 
   beforeSetOption = () => {
@@ -108,6 +120,8 @@ Chart.propTypes = {
   width: PropTypes.string,
   height: PropTypes.string,
   customStyle: PropTypes.string,
+  loading: PropTypes.bool,
+  loadingConf: PropTypes.object,
   option: PropTypes.object.isRequired,
   onBeforeSetOption: PropTypes.func
 }
@@ -116,5 +130,7 @@ Chart.defaultProps = {
   width: '100%',
   height: '200px',
   customStyle: '',
+  loading: null,
+  loadingConf: null,
   onBeforeSetOption: null
 }

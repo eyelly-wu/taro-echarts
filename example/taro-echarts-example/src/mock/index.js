@@ -19,6 +19,7 @@ import themeRiver from './themeRiver'
 import calendar from './calendar'
 import dataset from './dataset'
 import dataZoom from './dataZoom'
+import loading from './loading'
 
 export default {
   line,
@@ -41,5 +42,6 @@ export default {
   themeRiver,
   calendar,
   dataset,
-  dataZoom
+  dataZoom,
+  loading
 }

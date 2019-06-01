@@ -68,14 +68,16 @@ import Chart from 'taro-echarts'
 ```
 
 ## API
-| 属性名            | 说明                                                                                                                                                                                                                    | 类型            | 默认值 |
-| ----------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------- | :----- |
-| chartId           | 图表id,须确定唯一性                                                                                                                                                                                                     | string          | -      |
-| width             | 图表的宽                                                                                                                                                                                                                | string          | 100%   |
-| height            | 图表的高                                                                                                                                                                                                                | string          | 200px  |
-| customStyle       | 自定义容器样式                                                                                                                                                                                                          | string          | -      |
-| option            | ECharts的[option配置](https://www.echartsjs.com/option.html)                                                                                                                                                            | object          | -      |
-| onBeforeSetOption | 在echarts调用setOption前执行该方法，该方法会返回echarts的引用，可以在该方法中[注册地图](https://www.echartsjs.com/api.html#echarts.registerMap)，[注册主题](https://www.echartsjs.com/api.html#echarts.registerTheme)等 | (echarts)=>void | -      |
+| 属性名            | 说明                                                                                                                                                                                                                        | 类型            | 默认值 |
+| ----------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------- | :----- |
+| chartId           | 图表id,须确定唯一性                                                                                                                                                                                                         | string          | -      |
+| width             | 图表的宽                                                                                                                                                                                                                    | string          | 100%   |
+| height            | 图表的高                                                                                                                                                                                                                    | string          | 200px  |
+| option            | ECharts的[option配置](https://www.echartsjs.com/option.html)                                                                                                                                                                | object          | -      |
+| onBeforeSetOption | 在echarts首次调用setOption前执行该方法，该方法会返回echarts的引用，可以在该方法中[注册地图](https://www.echartsjs.com/api.html#echarts.registerMap)，[注册主题](https://www.echartsjs.com/api.html#echarts.registerTheme)等 | (echarts)=>void | -      |
+| customStyle       | 自定义容器样式                                                                                                                                                                                                              | string          | -      |
+| loading           | 是否显示loading效果                                                                                                                                                                                                         | bool            | false  |
+| loadingConf       | loading效果的样式[配置](https://www.echartsjs.com/api.html#echartsInstance.showLoading)                                                                                                                                     | object          | -      |
 
 ## 支持度
 

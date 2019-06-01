@@ -1,6 +1,6 @@
 import Taro, { Component } from '@tarojs/taro'
 import { View, Text } from '@tarojs/components'
-import '@/styles/iconfont/iconfont.css'
+import '@/styles/iconfont/iconfont.weapp.css'
 import Charts from '@/mock'
 import './index.scss'
 
@@ -29,7 +29,8 @@ const CHARTS = [
   { name: '数据集', icon: 'iconshujuji', type: 'dataset' },
   { name: '数据区域缩放', icon: 'iconquyusuofang', type: 'dataZoom' },
   { name: '拖拽', icon: 'icontuozhuai', type: 'drag' },
-  { name: '富文本', icon: 'iconfuwenben', type: 'richText' }
+  { name: '富文本', icon: 'iconfuwenben', type: 'richText' },
+  { name: 'loading', icon: 'iconloading', type: 'loading' }
 ]
 
 export default class Index extends Component {

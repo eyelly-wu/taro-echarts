@@ -43,7 +43,7 @@ export default class Index extends Component {
       <View className='chart-page-container'>
         {
           showCharts.map(item => {
-            const { id, title, option, height } = item
+            const { id, title, option, height, loading } = item
             let tempHeight = showCharts.length === 1 ? 'calc(100vh - 80px)' : height
             return (
               <Card
@@ -53,6 +53,7 @@ export default class Index extends Component {
                 <Chart
                   chartId={id}
                   height={tempHeight}
+                  loading={loading}
                   option={option}
                   onBeforeSetOption={(echarts) => this.onBeforeSetOption(echarts, chartKey)}
                 />
