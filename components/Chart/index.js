@@ -5,9 +5,6 @@ import _isEqual from 'lodash/isEqual.js'
 import Nerv from 'nervjs'
 import * as echarts from '../ec-canvas/echarts'
 
-const IS_H5 = process.env.TARO_ENV === 'h5'
-const IS_WEAPP = process.env.TARO_ENV === 'weapp'
-
 const commonFunc = (_this, chart) => {
   const { option, loading, loadingConf } = _this.props
   _this.beforeSetOption()
@@ -19,26 +16,35 @@ const commonFunc = (_this, chart) => {
   }
 }
 
-const initH5Chart = (_this) => {
-  const { chartId } = _this.props
-  let node = document.getElementById(chartId)
-  let chart = echarts.init(node)
-  commonFunc(_this, chart)
-}
-
-const initWeAppChart = (_this) => {
-  _this.chartRef.init((canvas, width, height) => {
-    const chart = echarts.init(canvas, null, {
-      width: width,
-      height: height
-    })
-    canvas.setChart(chart)
-    commonFunc(_this, chart)
-    return chart
-  })
-}
+const initChart = ((type) => {
+  switch (type) {
+    case 'h5':
+      return (_this) => {
+        const { chartId } = _this.props
+        let node = document.getElementById(chartId)
+        let chart = echarts.init(node)
+        commonFunc(_this, chart)
+      }
+    case 'weapp':
+      return (_this) => {
+        _this.chartRef.init((canvas, width, height) => {
+          const chart = echarts.init(canvas, null, {
+            width: width,
+            height: height
+          })
+          canvas.setChart(chart)
+          commonFunc(_this, chart)
+          return chart
+        })
+      }
+  }
+})(process.env.TARO_ENV)
 
 export default class Chart extends Component {
+
+  effects = []
+  layoutEffects = []
+  hooks = []
 
   config = {
     component: true,
@@ -48,11 +54,7 @@ export default class Chart extends Component {
   }
 
   componentDidMount() {
-    if (IS_WEAPP) {
-      initWeAppChart(this)
-    } else if (IS_H5) {
-      initH5Chart(this)
-    }
+    initChart(this)
   }
 
   componentWillReceiveProps(nextProps) {
@@ -92,23 +94,10 @@ export default class Chart extends Component {
     return (
       <View style={chartContainerStyle}>
         {
-          IS_WEAPP
-            ? <ec-canvas
-              ref={this.setChartRef}
-              canvasId={chartId}
-              ec={{
-                lazyLoad: false
-              }}
-            />
-            : null
-        }
-        {
-          IS_H5
-            ? <View
-              style={`width:${width};height:${height};`}
-              id={chartId}
-            />
-            : null
+          {
+            'h5': <View style={`width:${width};height:${height};`} id={chartId} />,
+            'weapp': <ec-canvas ref={this.setChartRef} canvasId={chartId} ec={{ lazyLoad: false }} />
+          }[process.env.TARO_ENV]
         }
       </View>
     )
