@@ -5,6 +5,11 @@ import _isEqual from 'lodash/isEqual.js'
 import Nerv from 'nervjs'
 import * as echarts from '../ec-canvas/echarts'
 
+let Taro_ = Taro
+if (process.env.TARO_ENV === 'h5') {
+  Taro_ = require('@tarojs/taro-h5').default
+}
+
 const commonFunc = (_this, chart) => {
   const { option, loading, loadingConf } = _this.props
   _this.beforeSetOption()
@@ -40,11 +45,7 @@ const initChart = ((type) => {
   }
 })(process.env.TARO_ENV)
 
-export default class Chart extends Component {
-
-  effects = []
-  layoutEffects = []
-  hooks = []
+export default class Chart extends Taro_.Component {
 
   config = {
     component: true,
