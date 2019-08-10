@@ -1,4 +1,5 @@
 import Taro, { Component } from '@tarojs/taro'
+import '@tarojs/async-await'
 import Index from './pages/index'
 
 import './app.scss'
@@ -18,7 +19,8 @@ class App extends Component {
   config = {
     pages: [
       'pages/index/index',
-      'pages/chart/index'
+      'pages/chart/index',
+      'pages/savecanvas/index'
     ],
     window: {
       backgroundTextStyle: 'light',

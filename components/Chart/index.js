@@ -1,4 +1,4 @@
-import Taro, { Component } from '@tarojs/taro'
+import Taro from '@tarojs/taro'
 import { View } from '@tarojs/components'
 import PropTypes from 'prop-types'
 import _isEqual from 'lodash/isEqual.js'
@@ -87,6 +87,20 @@ export default class Chart extends Taro_.Component {
   }
 
   setChartRef = node => this.chartRef = node
+
+  getImagePath = () => {
+    const { chartRef } = this
+    if (process.env.TARO_ENV !== 'weapp') throw '该方法只在微信小程序上支持'
+    if (!chartRef || !chartRef.canvasToTempFilePath) {
+      throw 'getImagePath error'
+    }
+    return new Promise((resolve, reject) => {
+      chartRef.canvasToTempFilePath({
+        success: ({ tempFilePath }) => resolve(tempFilePath),
+        fail: () => reject('getImagePath fail')
+      })
+    })
+  }
 
   render() {
     const { chartId, width, height, customStyle } = this.props

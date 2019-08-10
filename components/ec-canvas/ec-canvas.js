@@ -16,10 +16,11 @@ Component({
   },
 
   data: {
-
+    platform: ''
   },
 
   ready: function () {
+    this.getPlatformInfo()
     if (!this.data.ec) {
       console.warn('组件需绑定 ec 变量，例：<ec-canvas id="mychart-dom-bar" '
         + 'canvas-id="mychart-bar" ec="{{ ec }}"></ec-canvas>');
@@ -32,6 +33,11 @@ Component({
   },
 
   methods: {
+    getPlatformInfo: function () {
+      wx.getSystemInfo({
+        success: res => this.platform = res.platform
+      })
+    },
     init: function (callback) {
       const version = wx.version.version.split('.').map(n => parseInt(n, 10));
       const isValid = version[0] > 1 || (version[0] === 1 && version[1] > 9)
@@ -73,10 +79,13 @@ Component({
       if (!opt.canvasId) {
         opt.canvasId = this.data.canvasId;
       }
-
-      ctx.draw(true, () => {
-        wx.canvasToTempFilePath(opt, this);
-      });
+      if (this.platform === 'android') {
+        ctx.draw(true, setTimeout(() => wx.canvasToTempFilePath(opt, this), 100));
+      } else {
+        ctx.draw(true, () => {
+          wx.canvasToTempFilePath(opt, this);
+        });
+      }
     },
 
     touchStart(e) {

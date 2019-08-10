@@ -1,8 +1,9 @@
 {
   "name": "taro-echarts",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "适用于Taro项目的ECharts图表组件",
   "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -14,7 +15,7 @@
     "taro",
     "echarts"
   ],
-  "author": "eyelly",
+  "author": "Eyelly Wu",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/eyelly-wu/taro-echarts/issues"
