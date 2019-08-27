@@ -1,11 +1,11 @@
 {
   "name": "taro-echarts",
-  "version": "1.1.0",
+  "version": "1.1.2",
   "description": "适用于Taro项目的ECharts图表组件",
   "main": "index.js",
   "types": "index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "publish": "npm publish --registry http://registry.npmjs.org/"
   },
   "repository": {
     "type": "git",

@@ -1,5 +1,5 @@
 import Taro, { Component } from '@tarojs/taro'
-import { View } from '@tarojs/components'
+import { View, Button } from '@tarojs/components'
 import Chart from 'taro-echarts'
 import { Card } from '@/components'
 import Charts from '@/mock'
@@ -13,7 +13,8 @@ export default class Index extends Component {
   }
 
   state = {
-    chartKey: ''
+    chartKey: '',
+    show: true,
   }
 
   componentWillMount() {
@@ -36,13 +37,21 @@ export default class Index extends Component {
     echarts.registerMap('HK', geoJson)
   }
 
+  test = () => {
+    Taro.navigateTo({
+      url: '/pages/savecanvas/index'
+    })
+  }
+
   render() {
-    const { chartKey } = this.state
+    const { chartKey, show } = this.state
     let showCharts = chartKey ? Charts[chartKey] : []
     return (
       <View className='chart-page-container'>
+        <Button onClick={this.test}>点我</Button>
+        <Button onClick={() => this.setState({ show: !show })}>{show ? '隐藏' : '显示'}</Button>
         {
-          showCharts.map(item => {
+          show && showCharts.map(item => {
             const { id, title, option, height, loading } = item
             let tempHeight = showCharts.length === 1 ? 'calc(100vh - 80px)' : height
             return (

@@ -25,9 +25,7 @@ const initChart = ((type) => {
   switch (type) {
     case 'h5':
       return (_this) => {
-        const { chartId } = _this.props
-        let node = document.getElementById(chartId)
-        let chart = echarts.init(node)
+        let chart = echarts.init(_this.chartRef.vnode.dom)
         commonFunc(_this, chart)
       }
     case 'weapp':
@@ -110,8 +108,8 @@ export default class Chart extends Taro_.Component {
       <View style={chartContainerStyle}>
         {
           {
-            'h5': <View style={`width:${width};height:${height};`} id={chartId} />,
-            'weapp': <ec-canvas ref={this.setChartRef} canvasId={chartId} ec={{ lazyLoad: false }} />
+            'h5': <View ref={this.setChartRef} style={`width:${width};height:${height};`} />,
+            'weapp': <ec-canvas ref={this.setChartRef} ec={{ lazyLoad: false }} />
           }[process.env.TARO_ENV]
         }
       </View>
@@ -120,7 +118,6 @@ export default class Chart extends Taro_.Component {
 }
 
 Chart.propTypes = {
-  chartId: PropTypes.string.isRequired,
   width: PropTypes.string,
   height: PropTypes.string,
   customStyle: PropTypes.string,

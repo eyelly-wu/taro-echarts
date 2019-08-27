@@ -11,10 +11,17 @@ export default class Page extends Component {
     Taro.previewImage({ current: path, urls: [path] })
   }
 
+  goBack = () => {
+    Taro.navigateTo({
+      url: '/pages/chart/index?type=line&name=折线图'
+    })
+  }
+
   render() {
     return (
       <View>
         <Button onClick={this.preview}>查看生成图片</Button>
+        <Button onClick={this.goBack}>返回</Button>
         <Chart
           ref={this.setChartRef}
           chartId='chart-example-line'

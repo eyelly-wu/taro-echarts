@@ -1,2 +1,4 @@
 example/
 docs/
+package-lock.json
+.github

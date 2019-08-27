@@ -31,7 +31,7 @@
 		"@tarojs/taro-weapp": "1.3.10",
 		"nerv-devtools": "^1.4.3",
 		"nervjs": "^1.4.3",
-		"taro-echarts": "^1.1.0"
+		"taro-echarts": "^1.1.2"
 	},
 	"devDependencies": {
 		"@tarojs/plugin-babel": "1.3.10",

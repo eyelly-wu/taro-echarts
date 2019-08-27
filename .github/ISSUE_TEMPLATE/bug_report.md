@@ -1,6 +1,6 @@
 ---
-name: Bug report
-about: Create a report to help us improve
+name: 问题反馈
+about: 描述你遇到的问题
 title: ''
 labels: bug
 assignees: eyelly-wu

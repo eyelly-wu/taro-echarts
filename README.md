@@ -50,7 +50,6 @@ import Chart from 'taro-echarts'
 示例代码：以折线图为例
 ```js
 <Chart
-  chartId='chart-example-line'
   option={{
     xAxis: {
       type: 'category',
@@ -70,7 +69,6 @@ import Chart from 'taro-echarts'
 ## API
 | 属性名            | 说明                                                                                                                                                                                                                        | 类型            | 默认值 |
 | ----------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------- | :----- |
-| chartId           | 图表id,须确定唯一性                                                                                                                                                                                                         | string          | -      |
 | width             | 图表的宽                                                                                                                                                                                                                    | string          | 100%   |
 | height            | 图表的高                                                                                                                                                                                                                    | string          | 200px  |
 | option            | ECharts的[option配置](https://www.echartsjs.com/option.html)                                                                                                                                                                | object          | -      |
@@ -108,7 +106,6 @@ export default class Page extends Component {
         <Button onClick={this.preview}>查看生成图片</Button>
         <Chart
           ref={this.setChartRef}
-          chartId='chart-example-line'
           loadingConf={{ textColor: 123 }}
           option={{
             xAxis: {
