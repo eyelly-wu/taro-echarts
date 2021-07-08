@@ -78,9 +78,16 @@
     lodash "^4.2.0"
     to-fast-properties "^2.0.0"
 
-"@tarojs/components@1.3.0":
-  version "1.3.0"
-  resolved "https://registry.npm.taobao.org/@tarojs/components/download/@tarojs/components-1.3.0.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40tarojs%2Fcomponents%2Fdownload%2F%40tarojs%2Fcomponents-1.3.0.tgz#90cbc06e3da7d73ff754284baee2d291659cc64f"
+"@tarojs/async-await@^1.3.10":
+  version "1.3.42"
+  resolved "https://registry.yarnpkg.com/@tarojs/async-await/-/async-await-1.3.42.tgz#d2c05e529cee6ea2b7ad29e5a362964dcb7933d9"
+  dependencies:
+    promise-polyfill "^7.1.2"
+    regenerator-runtime "^0.11.1"
+
+"@tarojs/components@1.3.10":
+  version "1.3.10"
+  resolved "https://registry.yarnpkg.com/@tarojs/components/-/components-1.3.10.tgz#283392c56b83ae0def98022caaeb9adffbae7d00"
   dependencies:
     better-scroll "^1.14.1"
     classnames "^2.2.5"
@@ -89,34 +96,46 @@
     swiper "^4.4.2"
     weui "^1.1.2"
 
-"@tarojs/plugin-babel@1.3.0":
-  version "1.3.0"
-  resolved "https://registry.npm.taobao.org/@tarojs/plugin-babel/download/@tarojs/plugin-babel-1.3.0.tgz#00c97ff0810f658cfa4acb39b5378d267147fc63"
+"@tarojs/components@^1.3.10":
+  version "1.3.42"
+  resolved "https://registry.yarnpkg.com/@tarojs/components/-/components-1.3.42.tgz#855873dc13ff2dafe45dd022002df897348ca563"
+  dependencies:
+    better-scroll "^1.14.1"
+    classnames "^2.2.5"
+    intersection-observer "^0.7.0"
+    omit.js "^1.0.0"
+    resolve-pathname "^3.0.0"
+    swiper "4.4.2"
+    weui "^1.1.2"
+
+"@tarojs/plugin-babel@1.3.10":
+  version "1.3.10"
+  resolved "https://registry.yarnpkg.com/@tarojs/plugin-babel/-/plugin-babel-1.3.10.tgz#5017cefa15e69cce48d1ce9cedbe9e9df5cdf742"
   dependencies:
     babel-core "^6.26.0"
 
-"@tarojs/plugin-csso@1.3.0":
-  version "1.3.0"
-  resolved "https://registry.npm.taobao.org/@tarojs/plugin-csso/download/@tarojs/plugin-csso-1.3.0.tgz#b0c82cd2d7bef8a7c98be27a0aa4f85a9d975c51"
+"@tarojs/plugin-csso@1.3.10":
+  version "1.3.10"
+  resolved "https://registry.yarnpkg.com/@tarojs/plugin-csso/-/plugin-csso-1.3.10.tgz#3f4661c67c7fbeb735bf33e331aecfd873b6caa1"
   dependencies:
     csso "^3.5.0"
 
-"@tarojs/plugin-sass@1.3.0":
-  version "1.3.0"
-  resolved "https://registry.npm.taobao.org/@tarojs/plugin-sass/download/@tarojs/plugin-sass-1.3.0.tgz#42f86808f31368cace44b508d11defe5c7eb8650"
+"@tarojs/plugin-sass@1.3.10":
+  version "1.3.10"
+  resolved "https://registry.yarnpkg.com/@tarojs/plugin-sass/-/plugin-sass-1.3.10.tgz#6882dceb8b4591c8177e9d39b4045cab4a44aca1"
   dependencies:
     node-sass "^4.12.0"
     scss-bundle "^2.5.1"
 
-"@tarojs/plugin-uglifyjs@1.3.0":
-  version "1.3.0"
-  resolved "https://registry.npm.taobao.org/@tarojs/plugin-uglifyjs/download/@tarojs/plugin-uglifyjs-1.3.0.tgz#3ad165783bb143dbbf90220b98bcbb6061155e20"
+"@tarojs/plugin-uglifyjs@1.3.10":
+  version "1.3.10"
+  resolved "https://registry.yarnpkg.com/@tarojs/plugin-uglifyjs/-/plugin-uglifyjs-1.3.10.tgz#5e794210e4ffd31233f7ee6d351d341ccf0f3463"
   dependencies:
     uglify-js "^3.3.24"
 
-"@tarojs/router@1.3.0":
-  version "1.3.0"
-  resolved "https://registry.npm.taobao.org/@tarojs/router/download/@tarojs/router-1.3.0.tgz#d3a0ffaf12d07b97c19fe7614357ae0695900297"
+"@tarojs/router@1.3.10":
+  version "1.3.10"
+  resolved "https://registry.yarnpkg.com/@tarojs/router/-/router-1.3.10.tgz#34c86e5dd048b3fd06ea543c41cc0c8b02a3ece6"
   dependencies:
     invariant "2.2.4"
     lodash "4.17.11"
@@ -125,18 +144,18 @@
     value-equal "0.4.0"
     warning "4.0.2"
 
-"@tarojs/taro-alipay@1.3.0":
-  version "1.3.0"
-  resolved "https://registry.npm.taobao.org/@tarojs/taro-alipay/download/@tarojs/taro-alipay-1.3.0.tgz#995e3130f3cd0a2e80f15edee432718175a545d9"
+"@tarojs/taro-alipay@1.3.10":
+  version "1.3.10"
+  resolved "https://registry.yarnpkg.com/@tarojs/taro-alipay/-/taro-alipay-1.3.10.tgz#3cb92275703db0e7d90db2a189f757b7ffbe63c6"
   dependencies:
-    "@tarojs/taro" "1.3.0"
-    "@tarojs/utils" "1.3.0"
+    "@tarojs/taro" "1.3.10"
+    "@tarojs/utils" "1.3.10"
     lodash "^4.17.10"
     prop-types "^15.6.1"
 
-"@tarojs/taro-h5@1.3.0":
-  version "1.3.0"
-  resolved "https://registry.npm.taobao.org/@tarojs/taro-h5/download/@tarojs/taro-h5-1.3.0.tgz#0de3ffa55579a4ee44a0e0965f84fa495f61b72a"
+"@tarojs/taro-h5@1.3.10":
+  version "1.3.10"
+  resolved "https://registry.yarnpkg.com/@tarojs/taro-h5/-/taro-h5-1.3.10.tgz#91ef1242ea9a4278ec34eb41d3932fa04b6a97c7"
   dependencies:
     base64-js "^1.3.0"
     jsonp-retry "^1.0.3"
@@ -144,52 +163,81 @@
     raf "^3.4.1"
     whatwg-fetch "^2.0.4"
 
-"@tarojs/taro-swan@1.3.0":
-  version "1.3.0"
-  resolved "https://registry.npm.taobao.org/@tarojs/taro-swan/download/@tarojs/taro-swan-1.3.0.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40tarojs%2Ftaro-swan%2Fdownload%2F%40tarojs%2Ftaro-swan-1.3.0.tgz#39799bbb649cc3c216165ef93c65c54d0d0342fe"
+"@tarojs/taro-h5@^1.3.10":
+  version "1.3.42"
+  resolved "https://registry.yarnpkg.com/@tarojs/taro-h5/-/taro-h5-1.3.42.tgz#d9c871356b949bc85d4b51656e17e74ffe21be14"
   dependencies:
-    "@tarojs/taro" "1.3.0"
-    "@tarojs/utils" "1.3.0"
+    base64-js "^1.3.0"
+    jsonp-retry "^1.0.3"
+    mobile-detect "^1.4.2"
+    raf "^3.4.1"
+    whatwg-fetch "^2.0.4"
+
+"@tarojs/taro-swan@1.3.10":
+  version "1.3.10"
+  resolved "https://registry.yarnpkg.com/@tarojs/taro-swan/-/taro-swan-1.3.10.tgz#ca2b30c64f05c74f94ddb40a3c958d1846971c68"
+  dependencies:
+    "@tarojs/taro" "1.3.10"
+    "@tarojs/utils" "1.3.10"
     lodash "^4.17.10"
     prop-types "^15.6.1"
 
-"@tarojs/taro-tt@1.3.0":
-  version "1.3.0"
-  resolved "https://registry.npm.taobao.org/@tarojs/taro-tt/download/@tarojs/taro-tt-1.3.0.tgz#b0cd574cf829bd6717727b9bf55e9d7b1798d86e"
+"@tarojs/taro-tt@1.3.10":
+  version "1.3.10"
+  resolved "https://registry.yarnpkg.com/@tarojs/taro-tt/-/taro-tt-1.3.10.tgz#fe25f527608d377f874d887dff8d2ced794335c2"
   dependencies:
-    "@tarojs/taro" "1.3.0"
-    "@tarojs/utils" "1.3.0"
+    "@tarojs/taro" "1.3.10"
+    "@tarojs/utils" "1.3.10"
     lodash "^4.17.10"
     prop-types "^15.6.1"
 
-"@tarojs/taro-weapp@1.3.0":
-  version "1.3.0"
-  resolved "https://registry.npm.taobao.org/@tarojs/taro-weapp/download/@tarojs/taro-weapp-1.3.0.tgz#bd9cbe744fceaefe82422233e8a841579bb0e56f"
+"@tarojs/taro-weapp@1.3.10":
+  version "1.3.10"
+  resolved "https://registry.yarnpkg.com/@tarojs/taro-weapp/-/taro-weapp-1.3.10.tgz#fc939d296e96bd169362d258c22c503945b1a35f"
   dependencies:
-    "@tarojs/taro" "1.3.0"
-    "@tarojs/utils" "1.3.0"
+    "@tarojs/taro" "1.3.10"
+    "@tarojs/utils" "1.3.10"
     lodash "^4.17.10"
     prop-types "^15.6.1"
 
-"@tarojs/taro@1.3.0":
-  version "1.3.0"
-  resolved "https://registry.npm.taobao.org/@tarojs/taro/download/@tarojs/taro-1.3.0.tgz#fdd29762251891302b18893c6defd505d9ae9570"
-
-"@tarojs/utils@1.3.0":
-  version "1.3.0"
-  resolved "https://registry.npm.taobao.org/@tarojs/utils/download/@tarojs/utils-1.3.0.tgz#45aaaf9dea78094078c7ad0edbc3ed13f8ed01c6"
-
-"@tarojs/webpack-runner@^1.3.0":
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/@tarojs/webpack-runner/-/webpack-runner-1.3.0.tgz#b3e98ae13f212dede444a87e738cb6381993b56b"
+"@tarojs/taro-weapp@^1.3.10":
+  version "1.3.42"
+  resolved "https://registry.yarnpkg.com/@tarojs/taro-weapp/-/taro-weapp-1.3.42.tgz#f0fe0bc67767bc163723b4a3a7aa43b82fed4b87"
   dependencies:
-    "@tarojs/taro-h5" "1.3.0"
+    "@tarojs/taro" "1.3.42"
+    "@tarojs/utils" "1.3.42"
+    lodash "^4.17.10"
+    prop-types "^15.6.1"
+
+"@tarojs/taro@1.3.10":
+  version "1.3.10"
+  resolved "https://registry.yarnpkg.com/@tarojs/taro/-/taro-1.3.10.tgz#687dead4a737bbcdc22c1e97deb10e294381f0dc"
+
+"@tarojs/taro@1.3.42", "@tarojs/taro@^1.3.10":
+  version "1.3.42"
+  resolved "https://registry.yarnpkg.com/@tarojs/taro/-/taro-1.3.42.tgz#12f995a7c0120dc7b14f08037bcbec1d2b4661ac"
+  dependencies:
+    "@tarojs/utils" "1.3.42"
+
+"@tarojs/utils@1.3.10":
+  version "1.3.10"
+  resolved "https://registry.yarnpkg.com/@tarojs/utils/-/utils-1.3.10.tgz#075d2a1da136af3aa6282fd9ddd3fcd550d63af6"
+
+"@tarojs/utils@1.3.42":
+  version "1.3.42"
+  resolved "https://registry.yarnpkg.com/@tarojs/utils/-/utils-1.3.42.tgz#93b62c742901297e7f4a30a2e716a90635eb3873"
+
+"@tarojs/webpack-runner@1.3.10":
+  version "1.3.10"
+  resolved "https://registry.yarnpkg.com/@tarojs/webpack-runner/-/webpack-runner-1.3.10.tgz#3cd215584eaac653ddfd587b41a06dfed47c4e9c"
+  dependencies:
+    "@tarojs/taro-h5" "1.3.10"
     autoprefixer "8.6.4"
     babel-core "6.26.0"
     babel-loader "7.1.4"
     babel-plugin-syntax-dynamic-import "6.18.0"
     babel-plugin-transform-react-jsx "6.24.1"
-    babel-plugin-transform-taroapi "1.3.0"
+    babel-plugin-transform-taroapi "1.3.10"
     babel-types "6.26.0"
     chalk "2.4.2"
     copy-webpack-plugin "^5.0.3"
@@ -206,8 +254,8 @@
     opn "5.3.0"
     ora "2.1.0"
     postcss-loader "2.1.6"
-    postcss-plugin-constparse "1.3.0"
-    postcss-pxtransform "1.3.0"
+    postcss-plugin-constparse "1.3.10"
+    postcss-pxtransform "1.3.10"
     resolve "1.8.1"
     resolve-url-loader "2.3.0"
     sass-loader "7.1.0"
@@ -455,7 +503,13 @@ adjust-sourcemap-loader@^1.1.0:
     object-path "^0.9.2"
     regex-parser "^2.2.9"
 
-agent-base@4, agent-base@^4.1.0, agent-base@~4.2.1:
+agent-base@4, agent-base@^4.3.0:
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/agent-base/-/agent-base-4.3.0.tgz#8165f01c436009bccad0b1d122f05ed770efc6ee"
+  dependencies:
+    es6-promisify "^5.0.0"
+
+agent-base@~4.2.1:
   version "4.2.1"
   resolved "https://registry.npm.taobao.org/agent-base/download/agent-base-4.2.1.tgz#d89e5999f797875674c07d87f260fc41e83e8ca9"
   dependencies:
@@ -1180,9 +1234,9 @@ babel-plugin-transform-strict-mode@^6.24.1:
     babel-runtime "^6.22.0"
     babel-types "^6.24.1"
 
-babel-plugin-transform-taroapi@1.3.0:
-  version "1.3.0"
-  resolved "https://registry.npm.taobao.org/babel-plugin-transform-taroapi/download/babel-plugin-transform-taroapi-1.3.0.tgz#ee6f76c43976aa5f6485cf25b3b99d63f7985f37"
+babel-plugin-transform-taroapi@1.3.10:
+  version "1.3.10"
+  resolved "https://registry.yarnpkg.com/babel-plugin-transform-taroapi/-/babel-plugin-transform-taroapi-1.3.10.tgz#b38f3f7b56e93195bda8ac134e1c0549ca47d0ea"
 
 babel-preset-env@^1.6.1:
   version "1.7.0"
@@ -2433,7 +2487,7 @@ dom-serializer@0:
     domelementtype "^1.3.0"
     entities "^1.1.1"
 
-dom7@^2.1.3:
+dom7@^2.1.2, dom7@^2.1.3:
   version "2.1.3"
   resolved "https://registry.npm.taobao.org/dom7/download/dom7-2.1.3.tgz#a736f9c3bfbc4ca039a81cd095f97d1d7f3de19c"
   dependencies:
@@ -2609,12 +2663,12 @@ es6-iterator@~2.0.3:
     es6-symbol "^3.1.1"
 
 es6-promise@^4.0.3:
-  version "4.2.6"
-  resolved "https://registry.npm.taobao.org/es6-promise/download/es6-promise-4.2.6.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fes6-promise%2Fdownload%2Fes6-promise-4.2.6.tgz#b685edd8258886365ea62b57d30de28fadcd974f"
+  version "4.2.8"
+  resolved "https://registry.yarnpkg.com/es6-promise/-/es6-promise-4.2.8.tgz#4eb21594c972bc40553d276e510539143db53e0a"
 
 es6-promisify@^5.0.0:
   version "5.0.0"
-  resolved "https://registry.npm.taobao.org/es6-promisify/download/es6-promisify-5.0.0.tgz#5109d62f3e56ea967c4b63505aef08291c8a5203"
+  resolved "https://registry.yarnpkg.com/es6-promisify/-/es6-promisify-5.0.0.tgz#5109d62f3e56ea967c4b63505aef08291c8a5203"
   dependencies:
     es6-promise "^4.0.3"
 
@@ -2633,11 +2687,11 @@ escape-string-regexp@^1.0.2, escape-string-regexp@^1.0.5:
   version "1.0.5"
   resolved "https://registry.npm.taobao.org/escape-string-regexp/download/escape-string-regexp-1.0.5.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fescape-string-regexp%2Fdownload%2Fescape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
 
-eslint-config-taro@1.3.0:
-  version "1.3.0"
-  resolved "https://registry.npm.taobao.org/eslint-config-taro/download/eslint-config-taro-1.3.0.tgz#b04c52cdaca7d997e99a0a021a3c881498eb77f8"
+eslint-config-taro@1.3.10:
+  version "1.3.10"
+  resolved "https://registry.yarnpkg.com/eslint-config-taro/-/eslint-config-taro-1.3.10.tgz#31078dda022b101436e4e1a4e6fced65d1dfefb3"
   dependencies:
-    eslint-plugin-taro "1.3.0"
+    eslint-plugin-taro "1.3.10"
 
 eslint-import-resolver-node@^0.3.2:
   version "0.3.2"
@@ -2681,9 +2735,9 @@ eslint-plugin-react@^7.8.2:
     prop-types "^15.7.2"
     resolve "^1.10.1"
 
-eslint-plugin-taro@1.3.0:
-  version "1.3.0"
-  resolved "https://registry.npm.taobao.org/eslint-plugin-taro/download/eslint-plugin-taro-1.3.0.tgz#a464fb2953549036d6c002ee3e35ecd9c228dfe4"
+eslint-plugin-taro@1.3.10:
+  version "1.3.10"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-taro/-/eslint-plugin-taro-1.3.10.tgz#ef60120aaa228f4d509d33c055d7abb856a7584f"
   dependencies:
     has "^1.0.1"
 
@@ -3588,10 +3642,10 @@ https-browserify@^1.0.0:
   resolved "https://registry.npm.taobao.org/https-browserify/download/https-browserify-1.0.0.tgz#ec06c10e0a34c0f2faf199f7fd7fc78fffd03c73"
 
 https-proxy-agent@^2.2.1:
-  version "2.2.1"
-  resolved "https://registry.npm.taobao.org/https-proxy-agent/download/https-proxy-agent-2.2.1.tgz#51552970fa04d723e04c56d04178c3f92592bbc0"
+  version "2.2.4"
+  resolved "https://registry.yarnpkg.com/https-proxy-agent/-/https-proxy-agent-2.2.4.tgz#4ee7a737abd92678a293d9b34a1af4d0d08c787b"
   dependencies:
-    agent-base "^4.1.0"
+    agent-base "^4.3.0"
     debug "^3.1.0"
 
 humanize-ms@^1.2.1:
@@ -3740,6 +3794,10 @@ internal-ip@^3.0.1:
   dependencies:
     default-gateway "^2.6.0"
     ipaddr.js "^1.5.2"
+
+intersection-observer@^0.7.0:
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/intersection-observer/-/intersection-observer-0.7.0.tgz#ee16bee978db53516ead2f0a8154b09b400bbdc9"
 
 invariant@2.2.4, invariant@^2.2.0, invariant@^2.2.2:
   version "2.2.4"
@@ -4502,6 +4560,10 @@ lodash@4.17.11, lodash@^4.0.0, lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.3,
   version "4.17.11"
   resolved "https://registry.npm.taobao.org/lodash/download/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
 
+lodash@^4.17.15:
+  version "4.17.15"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
+
 log-symbols@^2.1.0, log-symbols@^2.2.0:
   version "2.2.0"
   resolved "https://registry.npm.taobao.org/log-symbols/download/log-symbols-2.2.0.tgz#5740e1c5d6f0dfda4ad9323b5332107ef6b4c40a"
@@ -4829,9 +4891,13 @@ ms@2.0.0:
   version "2.0.0"
   resolved "https://registry.npm.taobao.org/ms/download/ms-2.0.0.tgz#5608aeadfc00be6c2901df5f9861788de0d597c8"
 
-ms@2.1.1, ms@^2.0.0, ms@^2.1.1:
+ms@2.1.1, ms@^2.0.0:
   version "2.1.1"
   resolved "https://registry.npm.taobao.org/ms/download/ms-2.1.1.tgz#30a5864eb3ebb0a66f2ebe6d727af06a09d86e0a"
+
+ms@^2.1.1:
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.2.tgz#d09d1f357b443f493382a8eb3ccd183872ae6009"
 
 multicast-dns-service-types@^1.1.0:
   version "1.1.0"
@@ -4892,28 +4958,28 @@ neo-async@^2.5.0:
   version "2.6.1"
   resolved "https://registry.npm.taobao.org/neo-async/download/neo-async-2.6.1.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fneo-async%2Fdownload%2Fneo-async-2.6.1.tgz#ac27ada66167fa8849a6addd837f6b189ad2081c"
 
-nerv-devtools@^1.4.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/nerv-devtools/-/nerv-devtools-1.4.0.tgz#5f59eabfc1dd9567f15dd551c9aa15eb2629d7a2"
+nerv-devtools@^1.4.3:
+  version "1.5.6"
+  resolved "https://registry.yarnpkg.com/nerv-devtools/-/nerv-devtools-1.5.6.tgz#2af0ef109918e5a5a7282f2cfb8a0d7e4a2858be"
   dependencies:
     nerv-shared "1.4.0"
-    nerv-utils "1.4.0-beta.5"
-    nervjs "1.4.0"
+    nerv-utils "1.4.5"
+    nervjs "1.5.6"
 
 nerv-shared@1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/nerv-shared/-/nerv-shared-1.4.0.tgz#4ae903f215888ab886b3d04ae3b95d5327e67f43"
 
-nerv-utils@1.4.0-beta.5:
-  version "1.4.0-beta.5"
-  resolved "https://registry.yarnpkg.com/nerv-utils/-/nerv-utils-1.4.0-beta.5.tgz#9630c858fce0a77b4c328d91ba120a1e0db96297"
+nerv-utils@1.4.5:
+  version "1.4.5"
+  resolved "https://registry.yarnpkg.com/nerv-utils/-/nerv-utils-1.4.5.tgz#3e017a8a1b605b35ee31ad396a038207fbc597b0"
 
-nervjs@1.4.0, nervjs@^1.4.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/nervjs/-/nervjs-1.4.0.tgz#dd5df50d6dbf6ba2f2129d1a5f96deb8e09df4b4"
+nervjs@1.5.6, nervjs@^1.4.3:
+  version "1.5.6"
+  resolved "https://registry.yarnpkg.com/nervjs/-/nervjs-1.5.6.tgz#0451dd06993f7e3a885a6d1be3ea049ac51f1abd"
   dependencies:
     nerv-shared "1.4.0"
-    nerv-utils "1.4.0-beta.5"
+    nerv-utils "1.4.5"
 
 next-tick@^1.0.0:
   version "1.0.0"
@@ -5784,9 +5850,9 @@ postcss-modules-values@^1.3.0:
     icss-replace-symbols "^1.1.0"
     postcss "^6.0.1"
 
-postcss-plugin-constparse@1.3.0:
-  version "1.3.0"
-  resolved "https://registry.npm.taobao.org/postcss-plugin-constparse/download/postcss-plugin-constparse-1.3.0.tgz#3a46828329fb4730cae777e256cbb59bb00e5c09"
+postcss-plugin-constparse@1.3.10:
+  version "1.3.10"
+  resolved "https://registry.yarnpkg.com/postcss-plugin-constparse/-/postcss-plugin-constparse-1.3.10.tgz#4a7efdae61afdc17923afa93f21baf9ee488e082"
   dependencies:
     postcss "^6.0.22"
 
@@ -5797,9 +5863,9 @@ postcss-pxtorem@^4.0.1:
     object-assign "^4.1.0"
     postcss "^5.2.10"
 
-postcss-pxtransform@1.3.0:
-  version "1.3.0"
-  resolved "https://registry.npm.taobao.org/postcss-pxtransform/download/postcss-pxtransform-1.3.0.tgz#5c70a29ceb38d978287704a310abadd12c5a1bd4"
+postcss-pxtransform@1.3.10:
+  version "1.3.10"
+  resolved "https://registry.yarnpkg.com/postcss-pxtransform/-/postcss-pxtransform-1.3.10.tgz#e8d31de1e9c5121bcbea002f47aab33b4d482280"
   dependencies:
     postcss "^6.0.16"
     postcss-pxtorem "^4.0.1"
@@ -5863,6 +5929,10 @@ progress@^2.0.0:
 promise-inflight@^1.0.1, promise-inflight@~1.0.1:
   version "1.0.1"
   resolved "https://registry.npm.taobao.org/promise-inflight/download/promise-inflight-1.0.1.tgz#98472870bf228132fcbdd868129bad12c3c029e3"
+
+promise-polyfill@^7.1.2:
+  version "7.1.2"
+  resolved "https://registry.yarnpkg.com/promise-polyfill/-/promise-polyfill-7.1.2.tgz#ab05301d8c28536301622d69227632269a70ca3b"
 
 promise-retry@^1.1.1:
   version "1.1.1"
@@ -6185,9 +6255,9 @@ regenerate@^1.2.1:
   version "1.4.0"
   resolved "https://registry.npm.taobao.org/regenerate/download/regenerate-1.4.0.tgz#4a856ec4b56e4077c557589cae85e7a4c8869a11"
 
-regenerator-runtime@^0.11.0:
+regenerator-runtime@^0.11.0, regenerator-runtime@^0.11.1:
   version "0.11.1"
-  resolved "https://registry.npm.taobao.org/regenerator-runtime/download/regenerator-runtime-0.11.1.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fregenerator-runtime%2Fdownload%2Fregenerator-runtime-0.11.1.tgz#be05ad7f9bf7d22e056f9726cee5017fbf19e2e9"
+  resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.11.1.tgz#be05ad7f9bf7d22e056f9726cee5017fbf19e2e9"
 
 regenerator-transform@^0.10.0:
   version "0.10.1"
@@ -7092,6 +7162,13 @@ supports-color@^5.1.0, supports-color@^5.3.0, supports-color@^5.4.0:
   dependencies:
     has-flag "^3.0.0"
 
+swiper@4.4.2:
+  version "4.4.2"
+  resolved "https://registry.yarnpkg.com/swiper/-/swiper-4.4.2.tgz#3a35237cbf4870034784e158b4197b65b763d647"
+  dependencies:
+    dom7 "^2.1.2"
+    ssr-window "^1.0.1"
+
 swiper@^4.4.2:
   version "4.5.0"
   resolved "https://registry.npm.taobao.org/swiper/download/swiper-4.5.0.tgz#4d870bec4f5abe2fb259325849dd2641c9243c0d"
@@ -7134,9 +7211,17 @@ tar@^4, tar@^4.4.8:
     safe-buffer "^5.1.2"
     yallist "^3.0.2"
 
-taro-echarts@^1.0.0-beta.2:
-  version "1.0.0-beta.2"
-  resolved "https://registry.npm.taobao.org/taro-echarts/download/taro-echarts-1.0.0-beta.2.tgz#c8c370fef4824bf2c05b77d450226757ecd990c2"
+taro-echarts@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/taro-echarts/-/taro-echarts-1.1.2.tgz#fa756d4f0d7b928edd67824a5cefc84d2daff053"
+  dependencies:
+    "@tarojs/components" "^1.3.10"
+    "@tarojs/taro" "^1.3.10"
+    "@tarojs/taro-h5" "^1.3.10"
+    "@tarojs/taro-weapp" "^1.3.10"
+    lodash "^4.17.15"
+    nervjs "^1.4.3"
+    prop-types "^15.7.2"
 
 term-size@^1.2.0:
   version "1.2.0"
